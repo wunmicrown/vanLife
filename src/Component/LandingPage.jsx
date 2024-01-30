@@ -12,6 +12,7 @@ const LandingPage = () => {
               <Link to="/" className="text-center font-bold text-[15.946px]">Find your van</Link>
             </button>
         </div>
+        
       </div>
     </>
   )

@@ -3,7 +3,7 @@ import logo from "../assets/img-folder/logog.png"
 const Navbar = () => {
     return (
         <>
-            <nav className="bg-white shadow-sm border-gray-200 dark:bg">
+            <nav className="bg-white shadow-sm border-gray-200 dark:bg sticky z-50 w-full">
                 <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
                    <Link to="/"><img className=' w-40' src={logo} alt="" /></Link>
                     <div className="">
