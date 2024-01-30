@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import Layout from './Component/Layout'
 import LandingPage from './Component/LandingPage'
-import Footer from './Component/Footer'
+import About from './pages/About'
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path='/' element={<LandingPage />} />
-          {/* <Route path='/' element={<Footer/>} /> */}
+          <Route path='/about' element={<About/>} />
         </Route>
       </Routes>
     </>
