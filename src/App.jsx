@@ -1,12 +1,13 @@
 import { Route, Routes } from 'react-router-dom'
 import Layout from './Component/layout/Layout'
+import LandingPage from './Component/LandingPage'
 
 const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout/>}>
-         
+        <Route element={<Layout/>}>
+        <Route path='/' element={<LandingPage/>}/>
         </Route>
       </Routes>
     </>
