@@ -7,7 +7,7 @@ const Navbar = () => {
                 <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
                    <Link to="/"><img className=' w-40' src={logo} alt="" /></Link>
                     <div className="">
-                        <ul className='flex flex-row p-4 md:p-0 mt-4 gap-8 text-center font-bold text-[#4D4D4D] text-[16px]'>
+                        <ul className='flex flex-row p-4 md:p-0 mt-4 gap-8 text-center font-bold text-[#4D4D4D] text-[18px]'>
                             <li>
                                 <Link to="/about">About</Link>
                             </li>
