@@ -1,14 +1,13 @@
-import { Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Layout from './Component/layout/Layout'
-import Navbar from './Component/Navbar'
 
 const App = () => {
   return (
     <>
       <Routes>
-        <Routes path="/" element={<Layout/>}>
+        <Route path="/" element={<Layout/>}>
          
-        </Routes>
+        </Route>
       </Routes>
     </>
   )
