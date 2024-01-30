@@ -1,10 +1,10 @@
-import landingPageImg from '../assets/img-folder/layer-img.png'
-import'./landingPage.css'
+import landing from "../assets/img-folder/layerbg.png"
+import "../Component/landingPage.css"
 const LandingPage = () => {
   return (
     <>
-      <div className='landingPageImg'>
-        <img className=' w-full ' src={landingPageImg} alt="" />
+      <div className="landing" style={{backgroundImage:`url(${landing})`,  backgroundSize:"cover", backgroundPosition:"center"}}>
+        
       </div>
     </>
   )
