@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family:Inter;
 }
 .landing {
   width: 100%;
@@ -19,5 +19,5 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px; 
 }
