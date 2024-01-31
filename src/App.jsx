@@ -3,6 +3,7 @@ import Layout from './Component/Layout'
 import LandingPage from './Component/LandingPage'
 import About from './pages/About'
 import Van from './pages/Van'
+import'./App.css'
 
 const App = () => {
   return (
