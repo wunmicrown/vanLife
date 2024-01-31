@@ -1,26 +1,32 @@
-import { Link } from 'react-router-dom'
-import logo from "../assets/img-folder/logog.png"
-const Navbar = () => {
-    return (
-        <>
-            <nav className="bg-[#FFF7ED] shadow-sm border-gray-200 dark:bg   w-full">
-                <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
-                   <Link to="/"><img className=' w-40' src={logo} alt="" /></Link>
-                    <div className="">
-                        <ul className='flex flex-row p-4 md:p-0 mt-4 gap-8 text-center font-bold text-[#4D4D4D] text-[18px]'>
-                            <li>
-                                <Link to="/about">About</Link>
-                            </li>
-                            <li>
-                               <Link to="/van">Van</Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+import { Link, useLocation } from "react-router-dom"
+import logo from "../assets/vanlife.svg"
 
-        </>
-    )
+const Navbar = () => {
+  const { pathname } = useLocation();
+  const isActive = pathname === "/about";
+  const isActiveVans = pathname === "/vans";
+
+  return (
+    <nav className="flex justify-between p-10">
+      <div>
+        <Link to="/">
+        <img src={logo} alt="" srcset="" width={100}/>
+        </Link>
+      </div>
+      <div className="flex gap-5">
+        <Link to="/about">
+          <div className={isActive ? "border-b-2 border-black w-full" : ""}>
+          About
+          </div>
+          </Link>
+        <Link to="/vans">
+          <div className={isActiveVans ? "border-b-2 border-black w-full" : ""}>
+          Vans
+          </div>
+          </Link>
+      </div>
+    </nav>
+  )
 }
 
 export default Navbar
