@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.account img {
+    width: 25px;
+}
+
+body {
+    background-color: #FFF7ED;
+}
+
+.box input {
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    width: 700px;
+    height: 70px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    outline: none;
+}
+.btnn{
+    margin-top: 50px;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: #FF8C38;
+    width: 700px;
+    height: 70px;
+}
+.ck {
+    outline: none;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.box h1 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 40px;
+
+}

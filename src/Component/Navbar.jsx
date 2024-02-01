@@ -7,7 +7,7 @@ const Navbar = () => {
   const isActiveVans = pathname === "/vans";
 
   return (
-    <nav className="flex justify-between p-10">
+    <nav className="flex bg-gray-100 shadow-lg justify-between p-10 sticky top-0">
       <div>
         <Link to="/">
         <img src={logo} alt="" srcset="" width={100}/>
