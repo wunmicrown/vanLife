@@ -5,6 +5,8 @@ import About from "./Component/About";
 import Van from "./Component/Van";
 import Vandetails from "./Component/Vandetails";
 import Login from "./Component/authentication/Login";
+import Host from "./Component/Host";
+import Dashboard from "./Component/Dashboard";
 
 
 
@@ -19,6 +21,10 @@ function App() {
           <Route path="/vans" element={<Van/>} />
           <Route path="/api/vans/:id" element={<Vandetails/>} />
           <Route path="/login" element={<Login/>} />
+
+          <Route path="/" element={<Host/>}>
+          <Route path="/host" element={<Dashboard/>}/>
+          </Route>
         </Route>
       </Routes>
     </>
