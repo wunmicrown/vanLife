@@ -39,7 +39,7 @@ const Dashboard = () => {
         </div>
         <section>
           <div className="flex mx-12 pt-10 justify-between">
-            <p className="font-bold text-[24px] leading-10">Your listed vans</p>
+            <p className="font-bold text-xl lg:text-[24px] leading-10 sm:text-xl">Your listed vans</p>
             <p className="text-base font-medium leading-10">
               <button onClick={() => setShowAll(!showAll)}>{viewButtonText}</button>
             </p>
@@ -48,7 +48,7 @@ const Dashboard = () => {
             {displayedData.map(item => (
               <div key={item.id} className="flex flex-col md:flex-row items-center justify-between rounded p-5 mb-4">
                 <img src={item.imageUrl} alt={item.name} className="w-full md:w-44 mb-2 md:mb-0" />
-                <div className="flex flex-col sm:flex-row items-center sm:items-start ml-2">
+                <div className="flex flex-col md:flex-col sm:flex-row items-center sm:items-start ml-2">
                   <h2 className="text-xl font-bold">{item.name}</h2>
                   <p className="text-gray-600">${item.price}/day</p>
                 </div>
