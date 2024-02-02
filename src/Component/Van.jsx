@@ -11,7 +11,7 @@ const Van = () => {
     axios.get(URL)
       .then(response => {
         setVans(response.data);
-        setFilteredVans(response.data); 
+        setFilteredVans(response.data);
       })
       .catch(error => {
         console.error("Error fetching data:", error);
@@ -32,37 +32,37 @@ const Van = () => {
       <div className="font-bold text-3xl px-10">
         <h1>Explore our van options</h1>
       </div>
-      <nav className="px-10 my-10 flex justify-between">
-        <div className="flex gap-10">
-          <button className="bg-orange-200 p-3 w-36 flex justify-center rounded" onClick={() => filterVansByType('simple')}>
+      <nav className="px-10 my-10 flex justify-between flex-wrap">
+        <div className="flex gap-4 flex-wrap">
+          <button className="bg-orange-200 p-3 flex justify-center rounded" onClick={() => filterVansByType('simple')}>
             Simple
           </button>
-          <button className="bg-orange-200 p-3 w-36 flex justify-center rounded" onClick={() => filterVansByType('luxury')}>
+          <button className="bg-orange-200 p-3 flex justify-center rounded" onClick={() => filterVansByType('luxury')}>
             Luxury
           </button>
-          <button className="bg-orange-200 p-3 w-36 flex justify-center rounded" onClick={() => filterVansByType('rugged')}>
+          <button className="bg-orange-200 p-3 flex justify-center rounded" onClick={() => filterVansByType('rugged')}>
             Rugged
           </button>
         </div>
         <div>
           <button className="border-b-2 border-black p-1" onClick={clearFilter}>
-            clear filter
+            Clear Filter
           </button>
         </div>
       </nav>
 
-      <div className="grid grid-cols-3 gap-10 px-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
         {
           filteredVans.map((van) => (
-            <Link to={`/api/vans/${van.id}`}>
-            <div key={van.id} className="border rounded p-5">
-              <img src={van.imageUrl} alt={van.name} className="w-full mb-2" />
-              <h2 className="text-xl font-bold">{van.name}</h2>
-              <p className="text-gray-600">${van.price}</p>
-              <button className="bg-orange-200 p-3 rounded">
-                {van.type}
-              </button>
-            </div>
+            <Link to={`/api/vans/${van.id}`} key={van.id}>
+              <div className="rounded p-5">
+                <img src={van.imageUrl} alt={van.name} className="w-full" />
+                <h2 className="text-xl font-bold">{van.name}</h2>
+                <p className="text-gray-600">${van.price}</p>
+                <button className="bg-orange-200 p-3 rounded">
+                  {van.type}
+                </button>
+              </div>
             </Link>
           ))
         }
