@@ -10,7 +10,6 @@ const Dashboard = () => {
   useEffect(() => {
     axios.get(URL).then(res => {
       setData(res.data);
-      console.log(res.data);
     });
   }, []);
 
