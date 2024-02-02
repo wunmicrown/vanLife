@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 import "./login.css"
-const Login = () => {
+const Signup = () => {
   const navigate = useNavigate()
   const [data, setData] = useState([])
   const sup = () => {
@@ -27,4 +27,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Signup

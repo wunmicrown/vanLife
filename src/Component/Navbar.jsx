@@ -7,13 +7,18 @@ const Navbar = () => {
   const isActiveVans = pathname === "/vans";
 
   return (
-    <nav className="flex bg-gray-100 shadow-lg justify-between p-10 sticky top-0">
+    <nav className="flex bg-[#FFF7ED] shadow-lg justify-between p-10 sticky top-0">
       <div>
         <Link to="/">
         <img src={logo} alt="" srcset="" width={100}/>
         </Link>
       </div>
       <div className="flex gap-5">
+      <Link to="/host">
+          <div className={isActiveVans ? "border-b-2 border-black w-full" : ""}>
+          Host
+          </div>
+          </Link>
         <Link to="/about">
           <div className={isActive ? "border-b-2 border-black w-full" : ""}>
           About
@@ -24,6 +29,7 @@ const Navbar = () => {
           Vans
           </div>
           </Link>
+       
       </div>
     </nav>
   )
