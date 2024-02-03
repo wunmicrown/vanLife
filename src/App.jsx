@@ -18,7 +18,6 @@ import VanDashAll from "./Component/VanDashAll";
 const App=()=> {
   return (
     <>
-    {/* <Signup/> */}
       <Routes>
           <Route path="/" element={<Signup />} />
         <Route path="/" element={<Layout />}>
