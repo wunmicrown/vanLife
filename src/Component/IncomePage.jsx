@@ -7,9 +7,6 @@ const IncomePage = () => {
   useEffect(() => {
     const ctx = chartRef.current.getContext('2d');
 
-    // Generate random income data for the past 6 months
-    // const randomIncomeData = Array.from({ length: 6 }, () => Math.floor(Math.random() * 5));
-
     const chart = new Chart(ctx, {
       type: 'bar',
       data: {
@@ -19,23 +16,23 @@ const IncomePage = () => {
         ],
         datasets: [{
           label: 'Income',
-          data: [4,1.5,3,2.5,1.5,0.5], // Random income data for the past 6 months
-          backgroundColor: ['#FFEAD0', '#FFEAD0', '#FFEAD0', '#FFEAD0', '#FF8C38', '#FF8C38'], // Deep orange for the latest month, faded orange for past months
+          data: [4,1.5,3,2.5,1.5,0.5], 
+          backgroundColor: ['#FFEAD0', '#FFEAD0', '#FFEAD0', '#FFEAD0', '#FF8C38', '#FF8C38'], 
         }]
       },
       options: {
         scales: {
           y: {
             beginAtZero: true,
-            max: 5, // Set y-axis range from $0 to $5k
+            max: 5, 
             ticks: {
-              stepSize: 1, // Set step size for y-axis ticks
-              callback: value => `$${value}k`, // Format y-axis labels as $Xk
+              stepSize: 1,
+              callback: value => `$${value}k`, 
             },
           },
           x: {
             grid: {
-              display: false, // Hide x-axis grid lines
+              display: false, 
             },
           },
         },
@@ -47,7 +44,7 @@ const IncomePage = () => {
       }
     });
 
-    return () => chart.destroy(); // Cleanup when component unmounts
+    return () => chart.destroy();
   }, []);
 
   return (
@@ -58,7 +55,7 @@ const IncomePage = () => {
       <p className="lg:text-3xl font-bold">$2,260</p>
 
       <main className='w-full p-2'>
-      <canvas ref={chartRef} width="" height="" /> {/* Adjust canvas width and height as needed */}
+      <canvas ref={chartRef} width="" height="" />
       </main>
     </section>
   );
