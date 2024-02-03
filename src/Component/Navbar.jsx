@@ -29,11 +29,11 @@ const Navbar = () => {
           Vans
           </div>
           </Link>
-        <Link to="/signup">
+        {/* <Link to="/signup">
           <div className={isActiveVans ? "border-b-2 border-black w-full" : ""}>
           Signup
           </div>
-          </Link>
+          </Link> */}
        
       </div>
     </nav>
