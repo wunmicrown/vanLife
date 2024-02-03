@@ -54,7 +54,7 @@ const Signup = () => {
             <button type="submit" className='btnn bg-orange-600'>Signup</button>
             <div className='loginDirectUser'>
               <p className=' font-semibold'>Don’t have an account?
-                <span className='text-[#FF8C38]'><Link to="/signup">Create one now</Link></span>
+                <span className='text-[#FF8C38]'><Link to="/login">Create one now</Link></span>
               </p>
             </div>
           </form>

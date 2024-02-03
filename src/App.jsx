@@ -12,6 +12,7 @@ import ReviewDash from "./Component/ReviewDash";
 import Signup from "./Component/authentication/Signup";
 import VanDashAll from "./Component/VanDashAll";
 import'./App.css'
+import Login from "./Component/authentication/Login";
 
 
 
@@ -20,6 +21,7 @@ const App=()=> {
     <>
       <Routes>
           <Route path="/" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
         <Route path="/" element={<Layout />}>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
