@@ -49,14 +49,30 @@ const IncomePage = () => {
 
   return (
     <section className="lg:p-6 p-2">
-      <h1 className="text-2xl lg:text-4xl">Income Page</h1>
+      <h1 className="text-2xl lg:text-4xl font-bold">Income</h1>
 
-      <small>Last <b>30 Days</b></small>
-      <p className="lg:text-3xl font-bold">$2,260</p>
+      <p className='font-bold text-base mt-10'>Last <span className='underline'>30 Days</span></p>
+      <p className="lg:text-3xl font-bold mt-8">$2,260</p>
 
-      <main className='w-full p-2'>
-      <canvas ref={chartRef} width="" height="" />
+      <main className='mx-10'>
+      <canvas ref={chartRef} />
       </main>
+      <div className='flex mt-10 mb-20 justify-between mx-10'>
+          <p><b>Your transactions (3)</b></p>
+          <p className=' font-bold'><small>Last <span className=' underline'>30 days</span></small></p>
+      </div>
+      <div className='flex mt-10 mb-20 justify-between mx-10'>
+          <p className='font-bold text-2xl'>$720</p>
+          <p className=' font-medium'>1/12/22</p>
+      </div>
+      <div className='flex mt-10 mb-20 justify-between mx-10'>
+          <p className='font-bold text-2xl'>$560</p>
+          <p className=' font-medium'>10/11/22</p>
+      </div>
+      <div className='flex mt-10 mb-20 justify-between mx-10'>
+          <p className='font-bold text-2xl'>$980</p>
+          <p className=' font-medium'>23/11/22</p>
+      </div>
     </section>
   );
 }
