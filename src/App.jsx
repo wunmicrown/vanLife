@@ -11,7 +11,7 @@ import VanDash from "./Component/VanDash";
 import ReviewDash from "./Component/ReviewDash";
 import Signup from "./Component/authentication/Signup";
 import VanDashAll from "./Component/VanDashAll";
-
+import'./App.css'
 
 
 
