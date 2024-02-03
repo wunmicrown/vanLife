@@ -22,7 +22,7 @@ const VanDash = () => {
         <div className='flex'> 
           <div>
           {displayedVans.map(item => (
-            <Link to={`/api/vans/${item.id}`} key={item.id}>
+            <Link to={`/host/vans/${item.id}`} key={item.id}>
               <div className="rounded p-5 flex items-center">
                 <img src={item.imageUrl} alt={item.name} className="w-44" />
                   <div className=' flex-col-reverse mx-8'>

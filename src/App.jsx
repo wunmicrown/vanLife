@@ -14,7 +14,7 @@ import VanDashAll from "./Component/VanDashAll";
 
 
 
-function App() {
+const App=()=> {
   return (
     <>
       <Routes>
@@ -31,7 +31,7 @@ function App() {
             <Route path="/host/income" element={<IncomePage />} />
             <Route path="/host/vans" element={<VanDash />} />
             <Route path="/host/reviews" element={<ReviewDash />} />
-            <Route path="/host/vans/123" element={<VanDashAll />} />
+            <Route path="/host/vans/:vanId" element={<VanDashAll />} />
           </Route>
         </Route>
       </Routes>
