@@ -8,7 +8,7 @@ const VanDash = () => {
   
   useEffect(() => {
     axios.get(URL).then(res => {
-      setData(res.data); // Set data state with fetched data
+      setData(res.data);
     });
   }, []);
   
