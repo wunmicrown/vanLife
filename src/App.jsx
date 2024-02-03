@@ -7,30 +7,34 @@ import Vandetails from "./Component/Vandetails";
 import Host from "./Component/Host";
 import Dashboard from "./Component/Dashboard";
 import IncomePage from "./Component/IncomePage";
-import VanDash from "./VanDash";
-import ReviewDash from "./ReviewDash";
+import VanDash from "./Component/VanDash";
+import ReviewDash from "./Component/ReviewDash";
 import Signup from "./Component/authentication/Signup";
 import VanDashAll from "./Component/VanDashAll";
+
 
 
 
 const App=()=> {
   return (
     <>
+    {/* <Signup/> */}
       <Routes>
+          <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Van />} />
           <Route path="/api/vans/:id" element={<Vandetails />} />
-          <Route path="/signup" element={<Signup />} />
 
           <Route path="/" element={<Host />}>
             <Route path="/host" element={<Dashboard />} />
             <Route path="/host/income" element={<IncomePage />} />
             <Route path="/host/vans" element={<VanDash />} />
             <Route path="/host/reviews" element={<ReviewDash />} />
-            <Route path="/host/vans/:vanId" element={<VanDashAll />} />
+            <Route path="/host/vans/:id" element={<VanDashAll />} >
+              
+              </Route>
           </Route>
         </Route>
       </Routes>

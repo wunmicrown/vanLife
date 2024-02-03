@@ -1,18 +1,20 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
+import Vandashnav from "./Vandashnav";
 
 
 
 const VanDashAll = () => {
     const URL = 'http://localhost:5000/api/vans'
     const [data, setData] = useState([]);
+    const { id } = useParams()
     useEffect(() => {
         axios.get(URL).then(res => {
-            setData(res.data);
+            setData(res.data[id]);
         });
-    }, []);
-    const displayedVans = data.slice(0, 1);
+    }, [id]);
+    // const displayedVans = data.slice(0, 1);
     return (
         <>
             <div>
@@ -21,7 +23,7 @@ const VanDashAll = () => {
 
             <div className='flex pt-10'>
                 <div>
-                    {displayedVans.map(item => (
+                    {/* {displayedVans.map(item => (
                         <Link to={`/host/vans/${item.id}`} key={item.id}>
                             <div className="rounded p-5 flex items-center">
                                 <img src={item.imageUrl} alt={item.name} className="w-44" />
@@ -32,9 +34,23 @@ const VanDashAll = () => {
                                 </div>
                             </div>
                         </Link>
-                    ))}
+                    ))} */}
+                    <div className="flex flex-wrap justify-center">
+                        <div className="w-full md:w-1/2 px-4 mb-4 md:mb-0">
+                            <img src={data.imageUrl} alt="" className="lg:w-36" />
+                        </div>
+                        <div className="w-full md:w-1/2 px-4 ">
+                            <button className="bg-[#E17654] text-white font-semibold p-3 rounded mt-8">Simple</button>
+                            <h1 className="text-lg font-semibold mt-4">{data.name}</h1>
+                            <h2 className="text-lg font-semibold mt-4"><span className=" font-medium">${data.price}</span>/day</h2>
+                            <p className=" max-md:mb-10 mt-4 font-bold mb-5">{data.description}</p>
+                            {/* <button className="bg-[#FF8C38] w-full text-white mb-20 p-2 text-center font-bold text-[18px] rounded ">Rent this van</button> */}
+
+                        </div>
+                    </div>
                 </div>
             </div>
+                    <Vandashnav/>
         </>
     )
 }

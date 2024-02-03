@@ -18,7 +18,7 @@ const VanDash = () => {
     <>
       <section>
         <h2 className='font-bold mx-10'>Your listed vans</h2>
-        <div className='flex'> 
+        <div className='flex flex-wrap'> 
           <div>
           {displayedVans.map(item => (
             <Link to={`/host/vans/${item.id}`} key={item.id}>

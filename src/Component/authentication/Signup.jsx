@@ -5,9 +5,9 @@ import "./login.css"
 const Signup = () => {
   const navigate = useNavigate()
   const [data, setData] = useState([])
-  const sup = () => {
+  const signup = () => {
    
-      toast("login succesful")
+      // toast("login succesful")
       navigate("/")
    
       // toast("invalid username or password")
@@ -20,7 +20,7 @@ const Signup = () => {
           <div id="check"></div>
           <input type="text" placeholder='Email address'/>
           <input type="text" className='ck' placeholder='Password'/>
-          <button className='btnn' onClick={sup}>login</button>
+          <button className='btnn' onClick={signup}>Signup</button>
           <div className='loginDirectUser'>
           <p className=' font-semibold'>Don’t have an account? 
             <span className='text-[#FF8C38]'><Link>Create one now</Link></span>
