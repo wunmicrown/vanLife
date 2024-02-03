@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
-import Vandashnav from "./Vandashnav";
+// import Vandashnav from "./Vandashnav";
 
 
 
@@ -14,7 +14,6 @@ const VanDashAll = () => {
             setData(res.data[id]);
         });
     }, [id]);
-    // const displayedVans = data.slice(0, 1);
     return (
         <>
             <div>
@@ -23,21 +22,9 @@ const VanDashAll = () => {
 
             <div className='flex pt-10'>
                 <div>
-                    {/* {displayedVans.map(item => (
-                        <Link to={`/host/vans/${item.id}`} key={item.id}>
-                            <div className="rounded p-5 flex items-center">
-                                <img src={item.imageUrl} alt={item.name} className="w-44" />
-                                <div className=' flex-col-reverse mx-8'>
-                                    <button className="bg-[#E17654] text-white p-3 rounded mb-8">Simple</button>
-                                    <h2 className="text-xl font-bold md:text-xl max-sm:text-[13px]">{item.name}</h2>
-                                    <p className="text-gray-600">${item.price}/day</p>
-                                </div>
-                            </div>
-                        </Link>
-                    ))} */}
-                    <div className="flex flex-wrap justify-center">
-                        <div className="w-full md:w-1/2 px-4 mb-4 md:mb-0">
-                            <img src={data.imageUrl} alt="" className="lg:w-36" />
+                    <div className="flex flex-wrap justify-center w-full">
+                        <div className=" md:w-1/2 px-4 mb-4 md:mb-0">
+                            <img src={data.imageUrl} alt="" className="lg:w-![224px]" />
                         </div>
                         <div className="w-full md:w-1/2 px-4 ">
                             <button className="bg-[#E17654] text-white font-semibold p-3 rounded mt-8">Simple</button>
@@ -50,7 +37,7 @@ const VanDashAll = () => {
                     </div>
                 </div>
             </div>
-                    <Vandashnav/>
+            {/* <Vandashnav/> */}
         </>
     )
 }

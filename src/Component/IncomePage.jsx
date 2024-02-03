@@ -12,7 +12,7 @@ const IncomePage = () => {
       data: {
         labels: [
           'Ju', 'Au', 'Se', 'Oc', 'No', 
-          new Date().toLocaleString('default', { month: 'long' }) // Current month
+          new Date().toLocaleString('default', { month: 'long' }) 
         ],
         datasets: [{
           label: 'Income',
@@ -38,7 +38,7 @@ const IncomePage = () => {
         },
         plugins: {
           legend: {
-            display: false, // Hide legend
+            display: false, 
           },
         },
       }
@@ -54,7 +54,7 @@ const IncomePage = () => {
       <p className='font-bold text-base mt-10'>Last <span className='underline'>30 Days</span></p>
       <p className="lg:text-3xl font-bold mt-8">$2,260</p>
 
-      <main className='mx-10'>
+      <main className='mx-10 lg:w-full'>
       <canvas ref={chartRef} />
       </main>
       <div className='flex mt-10 mb-20 justify-between mx-10'>
