@@ -95,3 +95,21 @@
       width: 300px;
     }
   }
+
+  .message {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .success {
+    color: green;
+  }
+  
+  .error {
+    color: red;
+  }
+  
