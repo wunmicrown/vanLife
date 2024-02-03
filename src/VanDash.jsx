@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const VanDash = () => {
-  const [data, setData] = useState([]); // Initialize data state
+  const [data, setData] = useState([]); 
   const URL = 'http://localhost:5000/api/vans';
   
   useEffect(() => {
@@ -12,7 +12,6 @@ const VanDash = () => {
     });
   }, []);
   
-  // Slice the data array to show only the first three vans
   const displayedVans = data.slice(0, 3);
   
   return (

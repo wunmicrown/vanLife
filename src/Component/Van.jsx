@@ -24,8 +24,8 @@ const Van = () => {
   };
 
   const clearFilter = () => {
-    setFilteredVans(vans); // Reset to show all vans
-  };
+    setFilteredVans(vans); 
+    };
 
   return (
     <main>
