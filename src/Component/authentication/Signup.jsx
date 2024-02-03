@@ -26,7 +26,6 @@ const Signup = () => {
       return;
     }
 
-    // Dummy signup logic - navigate to home page
     setMessage('Signup successful');
     setTimeout(() => {
       setMessage('');
@@ -35,14 +34,19 @@ const Signup = () => {
   };
 
   return (
-    <div className='min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
+    <div className='min-h-screen bg-[#faf0e2] flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
       <div className='sm:mx-auto sm:w-full sm:max-w-md'>
         <h2 className='text-center text-3xl font-extrabold text-gray-900'>Sign up for an account</h2>
       </div>
 
-      <div className='mt-8 sm:mx-auto sm:w-full sm:max-w-md'>
-        <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
+      <div className='mt-8 sm:mx-auto sm:w-full sm:max-w-md mx-10'>
+        <div className='bg-[#FFF7ED] py-8 px-4 shadow sm:rounded-lg sm:px-10'>
           <form className='space-y-6' onSubmit={signup}>
+          {message && (
+              <div className={`text-center mt-4 text-lg ${message === 'Signup successful' ? 'text-green-500' : 'text-red-500'}`}>
+                {message}
+              </div>
+            )}
             <div>
               <label htmlFor='email' className='block text-sm font-medium text-gray-700'>
                 Email address
@@ -146,7 +150,7 @@ const Signup = () => {
                 onChange={(e) => setAcceptTerms(e.target.checked)}
               />
               <label htmlFor='acceptTerms' className='ml-2 block text-sm text-gray-900'>
-                I accept the <Link to="/terms" className="text-indigo-600">Terms and Conditions</Link>
+                I accept the <Link to="/terms" className="text-orange-600">Terms and Conditions</Link>
               </label>
             </div>
 
@@ -159,11 +163,7 @@ const Signup = () => {
               </button>
             </div>
 
-            {message && (
-              <div className={`text-center mt-4 text-sm ${message === 'Signup successful' ? 'text-green-500' : 'text-red-500'}`}>
-                {message}
-              </div>
-            )}
+            
 
           </form>
         </div>
