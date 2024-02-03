@@ -19,10 +19,10 @@ const VanDash = () => {
       <section>
         <h2 className='font-bold mx-10'>Your listed vans</h2>
         <div className='flex flex-wrap'> 
-          <div>
+          <div className='mt' >
           {displayedVans.map(item => (
             <Link to={`/host/vans/${item.id}`} key={item.id}>
-              <div className="rounded p-5 flex items-center">
+              <div className="rounded p-5 flex items-center bg-white">
                 <img src={item.imageUrl} alt={item.name} className="w-44" />
                   <div className=' flex-col-reverse mx-8'>
                   <h2 className="text-xl font-bold md:text-xl max-sm:text-[13px]">{item.name}</h2>
