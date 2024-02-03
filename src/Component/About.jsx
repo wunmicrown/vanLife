@@ -21,7 +21,7 @@ const About = () => {
         </p>
       </div>
 
-      <div className="p-5 bg-orange-200">
+      <div className="p-5 bg-orange-200 mb-20">
         <p className="font-bold text-2xl">your destination is waiting your van is ready.</p>
         <button className="bg-black text-white rounded-xl font-bold text-1xl my-3 p-3">Explore out vans</button>
       </div>
