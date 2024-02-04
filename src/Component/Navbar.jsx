@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className="flex bg-[#FFF7ED] shadow-lg justify-between p-10 sticky top-0">
       <div>
-        <Link to="/">
+        <Link to="/home">
         <img src={logo} alt="" srcset="" width={100}/>
         </Link>
       </div>
