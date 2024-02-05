@@ -1,8 +1,10 @@
-# React + Vite
+issue enconter after deployed  with netllify
+============================================
+after refreshed the page, the page is saying "site not found"
+I have tried to fix this by adding the following to my project:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1.  Added my " homepage deployment link "  to the "package.json" file Eg:
+"homepage": "https://homepage deployment link.netlify.app",
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. create a "_redirects" file in the "public" folder and add the following line:
+    "/* /index.html  200"
