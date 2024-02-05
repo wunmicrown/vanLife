@@ -33,8 +33,6 @@ const App=()=> {
             <Route path="/host/income" element={<IncomePage />} />
             <Route path="/host/vans" element={<VanDash />} />
             <Route path="/host/reviews" element={<ReviewDash />} />
-            <Route path="/host/reviews" element={<ReviewDash />} />
-            <Route path="/host/reviews" element={<ReviewDash />} />
             <Route path="/host/vans/:id" element={<VanDashAll />} >
           
             </Route>
