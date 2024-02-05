@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { API_URL } from './constants/api';
 const VanDash = () => {
   const [data, setData] = useState([]); 
-  const URL = 'http://localhost:5000/api/vans';
+  const URL = `${API_URL}/api/vans`;
   
   useEffect(() => {
     axios.get(URL).then(res => {

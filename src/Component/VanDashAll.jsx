@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
-// import Vandashnav from "./Vandashnav";
+import { API_URL } from "./constants/api";
+
 
 
 
 const VanDashAll = () => {
-    const URL = 'http://localhost:5000/api/vans'
+    const URL = `${API_URL}/api/vans`;
     const [data, setData] = useState([]);
     const { id } = useParams()
     useEffect(() => {
